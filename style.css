@@ -1,0 +1,427 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&family=Poppins:ital,wght@0,200;0,300;0,400;0,500;1,600&display=swap');
+
+*,*::after,::before{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+html{
+    font-size: 62.5%;
+}
+/*............ Utility classes............. */
+
+.container{
+    max-width: 1200px;
+    width: 90%;
+    margin: auto;
+}
+
+.btn{
+    display: inline-block;
+    padding: 5px 10px;
+    margin-top:5px;
+    background-color: lightskyblue;
+    border-radius: 50px;
+    text-decoration: none;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+
+
+/* ..................navbar styling................... */
+
+
+.navbar input[type="checkbox"],
+.navbar .humburger{
+    display: none;
+}
+
+
+ul li{
+    list-style: none;
+}
+
+ .navbar{
+    box-shadow: 0px 20px 10px 0px #aaa;
+    position: fixed;
+    width: 100%;
+    background-color: #fff;
+    color: #000;
+    opacity: 0.85;
+    z-index: 999;
+ }
+
+.nav-container{
+    display: flex;
+    justify-content: space-between;
+    height: 64px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.menu-items{
+    order:2;
+    display: flex;
+}
+
+.menu-items a{
+    color: #000;
+    text-decoration: none; 
+}
+
+.menu-items a:hover{
+    color: blue;
+}
+
+.logo{
+    order: 1;
+    font-size: 1.8rem;
+    color:purple;
+    /* margin-left: 2rem; */
+}
+.menu-items li{
+    margin-left: 3rem;
+    font-size: 1.8rem;
+    color: #000;
+}
+
+
+/* ...........showcase styling........ */
+
+
+.showcase-area{
+    height: 50vh;
+    background: url("food1.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.showcase-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    height:100% ;
+    font-size: 3rem;
+}
+
+.title{
+    text-transform: uppercase;
+}
+
+.showcase-container p{
+    font-size: 2rem;
+}
+
+
+
+/* .........About Styling....... */
+
+#about{
+    padding: 50px 0px;
+    background-color:#f5f5f7;
+}
+
+.about-us {
+    display: flex;
+    flex-wrap:wrap ;
+}
+
+#about p{
+    font-size: 2rem;
+    color: #555;
+
+    flex-direction:row;
+
+}
+
+/* .about-image{
+    flex: 1 1 400px;
+    padding: 30px;
+} */
+
+.about-text{
+    padding: 30px;
+    flex: 5;
+} 
+
+.about-image image{
+    display: block;
+    height: 400px;
+}
+
+
+
+#about h3{
+    font-size: 2rem;
+}
+
+
+#about h5{
+   font-size: 3rem;
+   font-weight: 400;
+   color: #666; 
+}
+
+
+.about-text{
+    margin: auto;
+    transform: translateX(-150%);
+    animation: about-text-animation 1s ease-in-out forwards;
+}
+@keyframes about-text-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+.about-image{
+    transform:translateX(150%);
+    animation: about-image-animation 1s ease-in-out forwards;
+}
+
+@keyframes about-image-animation{
+    100%{
+        transform: translate(0);
+    }
+}
+
+/* ............Food styling............ */
+
+#food{
+    padding: 50px 0;
+    background-color: #f5f5f7;
+}
+
+
+
+.titlee{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+
+.food-container{
+    display:flex;
+    justify-content: space-between;
+
+}
+
+ /* .food-container{
+    position: absolute;
+    top: 70%;
+    left: 50%; */
+    /* transform: translate(-50% -50%);
+} */
+ .food-container img{
+    display: block; 
+     width: 100%;
+    margin: auto;
+    max-height: 300px;
+    object-fit: center;
+    object-position: center;
+ } 
+.image1{
+    position: relative;
+    margin: 0 1rem;
+}
+
+.fruit-detail{
+    position: absolute;
+    top:40%;
+    left: 3%; 
+     transform: translate(-50% -50%);
+     text-align: center;
+     opacity: 0;
+     z-index: 2;
+    }
+
+
+.fruit-detail h2{
+    font-size: 3rem;
+    color: pink;
+}
+
+.image1::after{
+    content: "";
+/* border: 2px solid black; */
+position: absolute;
+display: block;
+top: 0;
+left: 0;
+background-color: rgba(0, 0, 0, 0.623);
+height: 100%;
+width: 100%;
+opacity: 0;
+z-index: 1;
+transform:all 2s ease-in-out  ;
+ 
+}
+
+.image1:hover::after{
+    opacity: 1;
+}
+
+.image1:hover .fruit-detail{
+    opacity: 1;
+    left:36%;
+}
+
+/* ................Food menu...................... */
+
+
+#food-menu{
+    padding: 50px 0;
+    background-color: #f5f5f7;
+}
+
+
+
+.food-p{
+    text-align: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+    font-family: 400;
+}
+
+
+.food-menu-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 50px 0 30px 0;
+}
+
+.food-menu-items{
+    display: flex;
+
+}
+
+.food-menu-container img{
+    border-radius: 50%;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+    margin-bottom: 20px;
+}
+ 
+
+.food-menu-container h3{
+    font-size: 2rem;
+}
+
+.food-menu-container p{
+    font-size: 1.5rem;
+    color: #555;
+}
+
+.food-details{
+    margin: auto 1.2rem;
+}
+
+.food-details .food-price{
+    color: seagreen;
+    font-weight: 700;
+}
+
+
+.food-details .food-name{
+    font-size: 2rem;
+}
+
+
+#contact{
+    padding:5rem 0 ;
+    background-color: #aaa;
+}
+.contact-container{
+    display: flex;
+    background: white;
+}
+
+.contact-image{
+    width: 50%;
+}
+
+.contact-image img{
+    height: 350px;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+.form{
+    padding: 1.2rem;
+    width: 50%;
+    margin: auto;
+}
+
+
+.form input{
+    display: block;
+    width: 100%;
+    margin-bottom: 1.2rem;
+    color: black;
+    outline: none;
+    font-family: 400;
+    border: none;
+    border-bottom: 2px solid white;
+    font-size: 2rem;
+}
+
+
+.form textarea{
+    font-size: 1.8rem;
+    border-bottom: 2px solid #ddd;
+}
+
+.contact-container .contact-h2{
+    font-size: 2rem;
+}
+
+
+.form a{
+    font-size: 1.8rem;
+}
+
+/* ...........foooter styling................ */
+
+#footer h2{
+    text-align: center;
+    color: #fff;
+    background-color: #555;
+    padding: 3rem;
+    font-size: 2rem;
+    font-family: 500;
+}
+
+
+
+/* ............................................. */
+
+
+@media(max-width:768px){
+    .food-container{
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .food-items:not(:last-child){
+        margin-bottom: 3rem;
+
+    }
+}
+
+
+
